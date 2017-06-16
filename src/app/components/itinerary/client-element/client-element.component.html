@@ -1,0 +1,9 @@
+<img class="ui avatar image" src="/assets/mark.png">
+<div class="content">
+  <div class="header">{{ client.name }}</div>
+  {{ client.address }}
+</div>
+<div class="ui right floated button" (click)="onButtonClicked(client); $event.stopPropagation()">
+  <i class="add icon"></i>
+  Nuevo Pedido
+</div>

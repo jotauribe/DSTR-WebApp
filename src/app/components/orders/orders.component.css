@@ -1,0 +1,34 @@
+.ui.header{
+  padding: 2em;
+}
+
+.ui.grid{
+  height: 662px ;
+  margin-top: 0px;
+  background-color: whitesmoke;
+}
+
+.segment{
+  background-color: white;
+  min-height: 100%;
+  border-radius: 0;
+}
+
+.ui.grid>.column:not(.row){
+  padding-top: -10px;
+  padding-bottom: -10px;
+}
+
+.column{
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+#main-segment{
+  margin-top: 0;
+  height: 662px ;
+}
+
+#client-detail{
+  width: 200px;
+}

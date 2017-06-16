@@ -1,0 +1,34 @@
+<div class="ui horizontal segments container" id="main-segment">
+  <div class="ui segment">
+
+    <h1 class="ui header">Visitas Pendientes</h1>
+
+    <div class="ui search">
+      <div class="ui icon input">
+        <input class="prompt" type="text" placeholder="Bucar">
+        <i class="search icon"></i>
+      </div>
+      <div class="results"></div>
+    </div>
+
+      <div class="ui selection celled list">
+        <app-client-element
+          *ngFor="let client of clients"
+          [client] = "client"
+          (onClientSelected)="selectedClient = $event"
+          (onNewOrderButtonClicked)=" showNewOrderForm($event); selectedClientForNewOrder = $event;"></app-client-element>
+      </div>
+  </div>
+
+  <div class="ui  segment" id="client-detail">
+    <h1 class="ui header">__________________________</h1>
+    <app-client-detail
+      *ngIf="selectedClient"
+      [client]="selectedClient"></app-client-detail>
+  </div>
+
+  <!--MODAL WINDOW-->
+  <app-new-order-form
+    *ngIf="selectedClientForNewOrder"
+    [client]="selectedClientForNewOrder"></app-new-order-form>
+</div>

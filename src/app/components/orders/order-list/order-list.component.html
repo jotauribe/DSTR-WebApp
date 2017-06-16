@@ -1,0 +1,15 @@
+<table class="ui selectable celled table" id="pedidos">
+  <thead>
+  <tr>
+    <th>Cliente</th>
+    <th>Estado</th>
+    <th>Monto</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr app-order-element
+      *ngFor="let order of orders"
+      [order]="order">
+  </tr>
+  </tbody>
+</table>
